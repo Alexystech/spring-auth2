@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  error:
+    include-stacktrace: never
+jms:
+  jwt:
+    security:
+      enabled: true
+    timezone: "America/Mexico"
+    issuer: "www.slasher.com"
+    token:
+      auth:
+        path: "/v1.0/oauth/client_credential/accesstoken"
+      secret: "secret key"
+      expires-in: 60
+    excluded:
+      path: "/v1.0/multi,/v1.0/otraexclusion"
